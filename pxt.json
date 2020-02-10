@@ -9,7 +9,8 @@
     "files": [
         "README.md",
         "main.blocks",
-        "main.ts"
+        "main.ts",
+        "wifi.ts"
     ],
     "testFiles": [
         "test.ts"
