@@ -1180,7 +1180,8 @@ namespace NaturalScience {
         }
         basic.pause(200);
     }
-    // basic.forever(function () {
-    //     microIoT_InquireStatus();
-    //  })
+     basic.forever(function () {
+        microIoT_InquireStatus();
+	 basic.pause(1000);
+      })
 }
