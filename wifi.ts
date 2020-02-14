@@ -1089,6 +1089,7 @@ namespace NaturalScience {
         buf[1] = READ_STATUS
         buf[2] = 0x06
         pins.i2cWriteBuffer(IIC_ADDRESS, buf);
+	buf = null
         let recbuf = pins.createBuffer(2)
         recbuf = pins.i2cReadBuffer(IIC_ADDRESS, 2, false)
         tempId = recbuf[0]
@@ -1182,6 +1183,6 @@ namespace NaturalScience {
     }
      basic.forever(function () {
         microIoT_InquireStatus();
-	 basic.pause(1000);
+	 basic.pause(10000);
       })
 }
