@@ -1089,7 +1089,7 @@ namespace NaturalScience {
         buf[1] = READ_STATUS
         buf[2] = 0x06
         pins.i2cWriteBuffer(IIC_ADDRESS, buf);
-	buf = null
+        buf = null
         let recbuf = pins.createBuffer(2)
         recbuf = pins.i2cReadBuffer(IIC_ADDRESS, 2, false)
         tempId = recbuf[0]
@@ -1168,21 +1168,22 @@ namespace NaturalScience {
                     Topic4CallBack();
                 }
                 break;
-            case HTTP_REQUEST:
-                microIoTStatus = "HTTP_REQUEST"
-                microIoT_GetData(tempStatus)
-                break;
-            case READ_VERSION:
-                microIoTStatus = "READ_VERSION"
-                microIoT_GetData(tempStatus)
-                break;
-            default:
-                break;
+            // case HTTP_REQUEST:
+            //     microIoTStatus = "HTTP_REQUEST"
+            //     microIoT_GetData(tempStatus)
+            //     break;
+            // case READ_VERSION:
+            //     microIoTStatus = "READ_VERSION"
+            //     microIoT_GetData(tempStatus)
+            //     break;
+            // default:
+            //     break;
         }
         basic.pause(200);
     }
-     basic.forever(function () {
-        //microIoT_InquireStatus();
-	// basic.pause(10000);
-      })
+
+    basic.forever(function () {
+        microIoT_InquireStatus();
+        //basic.pause(1000);
+    })
 }
