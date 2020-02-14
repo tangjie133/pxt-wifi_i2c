@@ -1182,7 +1182,7 @@ namespace NaturalScience {
         basic.pause(200);
     }
      basic.forever(function () {
-        microIoT_InquireStatus();
-	 basic.pause(10000);
+        //microIoT_InquireStatus();
+	// basic.pause(10000);
       })
 }
