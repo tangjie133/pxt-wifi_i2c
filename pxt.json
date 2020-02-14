@@ -1,23 +1,21 @@
 {
-    "name": "pxt-wifi_i2c",
-    "version": "0.0.0",
+    "name": "NaturalScience",
+    "version": "1.5.4",
     "description": "",
+    "license": "MIT",
     "dependencies": {
         "core": "*",
         "radio": "*"
     },
     "files": [
         "README.md",
-        "main.blocks",
-        "main.ts",
-        "wifi.ts"
+        "NaturalScience.ts",
+        "_locales/zh/NaturalScience-strings.json",
+        "ds18b20.cpp"
     ],
     "testFiles": [
         "test.ts"
     ],
-    "public": true,
-    "supportedTargets": [
-        "microbit"
-    ],
-    "preferredEditor": "blocksprj"
+    "public": false,
+    "preferredEditor": "tsprj"
 }
